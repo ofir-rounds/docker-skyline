@@ -31,5 +31,5 @@ ADD skyline-settings.py /opt/skyline/src/settings.py
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-WORKDIR /opt/skyline/bin
+ENV PATH $PATH:/opt/skyline/bin
 CMD ["skyline-start.sh"]
