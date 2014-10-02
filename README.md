@@ -14,7 +14,7 @@ Build and run with:
     docker build -t="carver/skyline" .
     
     # run
-    docker run -d carver/skyline
+    docker run -d -p 1500:1500 -p 2024:2024 carver/skyline
     
     # behold
     curl localhost:1500
@@ -22,4 +22,4 @@ Build and run with:
 
 If you want to show the log output at the terminal when running, omit the -d, like:
 
-    docker run carver/skyline
+    docker run -p 1500:1500 -p 2024:2024 carver/skyline
