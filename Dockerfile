@@ -17,7 +17,8 @@ RUN cd /opt/redis-2.6.16 && make
 
 ENV PATH $PATH:/opt/redis-2.6.16/src
 
-RUN pip install numpy pandas patsy msgpack-python
+RUN pip install --upgrade numpy 
+RUN pip install pandas patsy msgpack-python
 RUN pip install statsmodels  # must install pandas first :/
 
 RUN git clone https://github.com/etsy/skyline.git /opt/skyline
