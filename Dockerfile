@@ -37,3 +37,5 @@ ADD skyline-settings.py /opt/skyline/src/settings.py
 
 RUN chmod +x /usr/bin/skyline-start.sh
 CMD ["skyline-start.sh"]
+
+VOLUME ["/var/log/skyline"]
